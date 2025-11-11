@@ -5,12 +5,5 @@ pub fn wei_to_eth(wei: &str) -> String {
 }
 
 pub fn is_valid_ethereum_address(address: &str) -> bool {
-    if !address.starts_with("0x") {
-        return false;
-    }
-    
-    if address.len() != 42 {
-        return false;
-    }
-    return true;
+    return address.starts_with("0x") && address.len() == 42;
 }
